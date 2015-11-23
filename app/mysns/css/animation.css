@@ -1,0 +1,20 @@
+.dropdownbutton{
+    padding-top: 5%;
+    width: 100px;
+
+}
+.dropdownbutton ul{
+    min-width: 100px;
+    transform-origin: 50% 0;
+    -webkit-animation: slide .5s ease-in;
+    transition: max-height .2s ease-out;
+    background-color: #f2dede;
+}
+
+@-webkit-keyframes slide{
+    0%{transform: scale(1, 0);}
+    25%{transform: scale(1, 1.2);}
+    50%{transform: scale(1, 0.85);}
+    75%{transform: scale(1, 1.05);}
+    100%{transform: scale(1, 1);}
+}
