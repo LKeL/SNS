@@ -17,7 +17,7 @@ snsApp.config(['$routeProvider', function($routeProvider) {
         }).
         when('/home', {
             templateUrl: 'mysns/partials/home.html',
-            controller: 'test'
+            controller: 'homeController'
     });
 }]);
 
