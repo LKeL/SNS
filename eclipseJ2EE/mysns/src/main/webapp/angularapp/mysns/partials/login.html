@@ -1,0 +1,108 @@
+<div>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">WTFSNS</a>
+            <p class="navbar-text navbar-right">Designed by <a tabindex="0"  id="mypopover" ng-click="mypopover()"  data-toggle="popover" data-trigger="focus" data-placement="bottom" title="嘿嘿" data-content="heartblood" class="navbar-link">heartblood</a></p>
+        </div>
+    </nav>
+</div>
+
+<div class="login-site-wrapper">
+    <div class="login-site-wrapper-inner">
+        <div class="login-cover-container">
+            <div class="login-inner">
+                <!-- Button trigger modal -->
+                <button type="button"  class="btn btn-primary btn-lg" data-toggle="modal" data-target="#mylogin">加入我们</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- mylogin Modal -->
+<div class="modal fade " id="mylogin" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content modal-sm">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">登陆</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="user-name" class="control-label">用户名:</label>
+                        <input type="text" class="form-control" id="user-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="user-password" class="control-label">用户密码:</label>
+                        <input type="password" class="form-control" id="user-password" placeholder="Password">
+                    </div>
+                    <div class="login-from-area">
+                        <div class="dropdown dropdownbutton">
+                            <button id="dLabel" class="btn btn-info" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                地址
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                ...
+                            </ul>
+                        </div>
+                        <div class="dropdown dropdownbutton">
+                            <button id="dLabel" class="btn btn-info" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                地址
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                ...
+                            </ul>
+                        </div>
+                        <div class="dropdown dropdownbutton">
+                            <button id="dLabel" class="btn btn-info" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                地址
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                ...
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default login-footer-btn-left" ng-click="loginTOregister()">没有帐号?</button>
+                <button type="button" class="btn btn-danger " data-dismiss="modal">Close</button>
+                <a type="button" class="btn btn-primary" role="button" ng-click="clickdownlogin()" href="#home">Submit</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- myregister Modal -->
+<div class="modal fade " id="myregister" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content modal-sm">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">用户注册</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="user-name" class="control-label">用户名:</label>
+                        <input type="text" class="form-control" id="user-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="user-password" class="control-label">用户密码:</label>
+                        <input type="password" class="form-control" id="user-password" placeholder="Password">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+

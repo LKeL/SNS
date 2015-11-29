@@ -1,0 +1,271 @@
+/**
+ * SNS-login
+**/
+
+.SNS-login {
+    margin-top: 60px;
+    padding-bottom: 20px;
+}
+
+.login-site-wrapper {
+    margin-top: 20px;
+    color: #2F2C2C;
+    text-align: center;
+    text-shadow: 0 1px 3px rgba(0,0,0,.5);
+    display: table;
+    width: 100%;
+    height: 100%;/* For at least Firefox */
+    min-height: 100%;
+    -webkit-box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+    box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+
+.login-site-wrapper-inner {
+    background-image: url("http://johnzhang.cn/bing.php");
+    display: table-cell;
+}
+
+.login-cover-container {
+
+    text-shadow: none;
+    margin-top: 120px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.login-cover-container .btn-lg {
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 18px;
+}
+.login-inner {
+    margin-top: 250px;
+}
+@media (min-width: 992px) {
+    .masthead,
+    .mastfoot,
+    .login-site-wrapper-inner {
+        height: 650px;
+        width: 700px;
+    }
+}
+
+.login-footer-btn-left {
+    float: left;
+}
+
+.login-from-area {
+    height: 60px;
+}
+
+.dropdownbutton{
+    float: left;
+    padding-top: 5%;
+    width: 80px;
+    margin-left: 7px;
+}
+.dropdownbutton .btn {
+    width: 80px;
+}
+.dropdownbutton ul{
+    min-width: 80px;
+    transform-origin: 50% 0;
+    -webkit-animation: slide .5s ease-in;
+    transition: max-height .2s ease-out;
+    background-color: #f2dede;
+}
+
+@-webkit-keyframes slide{
+    0%{transform: scale(1, 0);}
+    25%{transform: scale(1, 1.2);}
+    50%{transform: scale(1, 0.85);}
+    75%{transform: scale(1, 1.05);}
+    100%{transform: scale(1, 1);}
+}
+
+
+/**
+ * SNS-home
+**/
+
+
+.home-content {
+
+    padding-top: 50px;
+    background: #34495e;
+    height: 700px;
+}
+.home-content .button {
+    color: #34495e;
+    background-color: #c3e50;
+}
+.home-content .button:hover {
+    background-color: #1a242f;
+}
+.home-content .overlay {
+    background-color: #1a242f;
+}
+.home-content .nav-el {
+    background-color: #2c3e50;
+    transition: background-color .3s ease-in;
+    -moz-transition: background-color .3s ease-in;
+    -webkit-transition: background-color .3s ease-in;
+}
+.home-content .nav-el:hover, .home-content .nav-el.active {
+    background: #1a242f;
+}
+.home-content .nav-el.active {
+    z-index: 11;
+}
+.home-content .backtoarticle {
+    border-color: #2c3e50;
+    color: #2c3e50;
+}
+.home-content .backtoarticle:hover {
+    color: #1a242f;
+    border-color: #1a242f;
+}
+
+.home-person-display {
+    width: 100%;
+    padding-left: 15%;
+    padding-top: 50px;
+}
+
+.home-slide-box a:link,a:hover,a:visited,a:active {
+    color: #fff;
+    text-decoration: none;
+}
+.home-slide-box {
+    position: fixed;
+    width: 0px;
+    overflow: visible;
+    margin-top: 50px;
+    z-index: 20;
+}
+.home-slide-box .box {
+    display: inline-block;
+    float: right;
+    clear: both;
+}
+.home-slide-box .card {
+    position: relative;
+    left: 32px;
+    padding: 16px 32px 20px 64px;
+    margin: 8px;
+    x-box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 8px 0 8px -8px rgba(0, 0, 0, 0.5);
+    background: #fff;
+    transition: all 0.3s ease-in-out 0.1s;
+}
+.home-slide-box .card:hover {
+    position: relative;
+    left: 100%;
+    margin-left: -32px;
+    box-shadow:
+        0 -8px 8px -8px rgba(0, 0, 0, 0.5),
+        0 8px 8px -8px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+}
+.card-content {
+    display:block;
+    color: #fff;
+    font-family: 'Droid Sans', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+    margin-top: 7px;
+    cursor: pointer;
+}
+.home-slide-box .bg-01 { background: #539770; }
+.home-slide-box .bg-02 { background: #4B7D74; }
+.home-slide-box .bg-03 { background: #8DC2BC; }
+.home-slide-box .bg-04 { background: #EDD6B4; }
+.home-slide-box .bg-05 { background: #BE7467; }
+.home-slide-box .bg-06 { background: #E2AE63; }
+
+.home-noscroll {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
+/* Overlay */
+.home-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 9999;
+    visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+.home-wrap {
+    display: block;
+    width: 80%;
+    max-width: 740px;
+    margin: 120px auto 0;
+}
+
+.close {
+
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    font-size: 36px;
+}
+
+/* Main Nav */
+.nav {
+    width: 400px;
+    max-width: 420px;
+
+    font-size: 33px;
+}
+
+.nav-el {
+    border: none;
+    position: relative;
+    display: inline-block;
+    float: right;
+    width: 47.5%;
+    padding-bottom: 47.5%;
+    color: white;
+    z-index: 10;
+    background-color: #2c3e50;
+    /* Placements */
+}
+.nav-el [class^="icon-"], .nav-el [class*=" icon-"] {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    line-height: 0;
+    margin-left: -0.5em;
+}
+.nav-el.active_reverse {
+    z-index: 11;
+
+}
+.nav-el.inactive {
+    pointer-events: none;
+    cursor: default;
+}
+.nav-el:nth-of-type(2n+1) {
+    float: left;
+}
+.nav-el:nth-of-type(n+3) {
+    margin-top: 5%;
+}
+
+.mfg-cancel {
+    outline:none;
+    text-transform: none;
+}
+.mfg-cancel:focus {
+    outline: none
+}
+
+:focus, a, .button, span {
+    outline: none;
+}

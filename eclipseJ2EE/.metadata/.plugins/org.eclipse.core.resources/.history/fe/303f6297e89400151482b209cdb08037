@@ -1,0 +1,10 @@
+
+	<web-app id="WebApp_ID">
+		<display-name>mysns</display-name>
+		<welcome-file-list>
+			<welcome-file>/angularapp/index.html</welcome-file>
+		</welcome-file-list>
+		 
+	</web-app>
+	
+	

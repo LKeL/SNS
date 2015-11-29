@@ -1,0 +1,641 @@
+
+/* A fix for Safari and .nav-el z-index:
+	when animation starts, the square appear bellow other .nav-el
+  	even if it has a bigger z-index */
+.demo3_cont {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* Space adjustment  */
+@media only screen and (min-width: 520px) {
+    .nav {
+        font-size: 48px;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .overlay .wrap {
+        margin: 150px auto 0;
+    }
+}
+/******************************
+COLORS
+******************************/
+/* demo4 */
+
+/******************************
+.nav-el.active anim
+******************************/
+@keyframes fx-el_topleft-active {
+    16% {
+        transform: translate3d(-27.5%, -27.5%, 0);
+    }
+
+    50% {
+        transform: translate3d(55.1%, 55.1%, 0) scale(1);
+        color: #FFF;
+    }
+
+    62% {
+        color: transparent;
+    }
+
+    100% {
+        transform: translate3d(55.1%, 55.1%, 0) scale(20);
+        color: transparent;
+    }
+}
+
+@keyframes fx-el_topright-active {
+    16% {
+        transform: translate3d(27.5%, -27.5%, 0);
+    }
+
+    50% {
+        transform: translate3d(-55.1%, 55.1%, 0) scale(1);
+        color: #FFF;
+    }
+
+    62% {
+        color: transparent;
+    }
+
+    100% {
+        transform: translate3d(-55.1%, 55.1%, 0) scale(20);
+        color: transparent;
+    }
+}
+
+@keyframes fx-el_btmleft-active {
+    16% {
+        transform: translate3d(-27.5%, 27.5%, 0);
+    }
+
+    50% {
+        transform: translate3d(55.1%, -55.1%, 0) scale(1);
+        color: #FFF;
+    }
+
+    62% {
+        color: transparent;
+    }
+
+    100% {
+        transform: translate3d(55.1%, -55.1%, 0) scale(20);
+        color: transparent;
+    }
+}
+
+@keyframes fx-el_btmright-active {
+    16% {
+        transform: translate3d(27.5%, 27.5%, 0);
+    }
+
+    50% {
+        transform: translate3d(-55.1%, -55.1%, 0) scale(1);
+        color: #FFF;
+    }
+
+    62% {
+        color: transparent;
+    }
+
+    100% {
+        transform: translate3d(-55.1%, -55.1%, 0) scale(20);
+        color: transparent;
+    }
+}
+#left-el-topleft.active {
+    animation: fx-el_topleft-active 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_topleft-active 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_topleft-active 1.6s 1 ease-in-out;
+}
+#el-topleft.active {
+    animation: fx-el_topleft-active 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_topleft-active 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_topleft-active 1.6s 1 ease-in-out;
+}
+#left-el-topright.active {
+    animation: fx-el_topright-active 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_topright-active 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_topright-active 1.6s 1 ease-in-out;
+}
+#el-topright.active {
+    animation: fx-el_topright-active 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_topright-active 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_topright-active 1.6s 1 ease-in-out;
+}
+#left-el-btmleft.active {
+    animation: fx-el_btmleft-active 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_btmleft-active 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_btmleft-active 1.6s 1 ease-in-out;
+}
+#el-btmleft.active {
+    animation: fx-el_btmleft-active 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_btmleft-active 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_btmleft-active 1.6s 1 ease-in-out;
+}
+#left-el-btmright.active {
+    animation: fx-el_btmright-active 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_btmright-active 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_btmright-active 1.6s 1 ease-in-out;
+}
+
+#el-btmright.active {
+    animation: fx-el_btmright-active 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_btmright-active 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_btmright-active 1.6s 1 ease-in-out;
+}
+
+/******************************
+.nav-el.inactive anim
+******************************/
+@keyframes fx-el_topleft-inactive {
+    0% {
+        transform: translate3d(0%, 0%, 0);
+        opacity: 1;
+    }
+
+    16% {
+        transform: translate3d(-27.5%, -27.5%, 0);
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate3d(55.1%, 55.1%, 0);
+    }
+
+    100% {
+        transform: translate3d(55.1%, 55.1%, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes fx-el_topright-inactive {
+    0% {
+        transform: translate3d(0%, 0%, 0);
+        opacity: 1;
+    }
+
+    16% {
+        transform: translate3d(27.5%, -27.5%, 0);
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate3d(-55.1%, 55.1%, 0);
+    }
+
+    100% {
+        transform: translate3d(-55.1%, 55.1%, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes fx-el_btmleft-inactive {
+    0% {
+        transform: translate3d(0%, 0%, 0);
+        opacity: 1;
+    }
+
+    16% {
+        transform: translate3d(-27.5%, 27.5%, 0);
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate3d(55.1%, -55.1%, 0);
+    }
+
+    100% {
+        transform: translate3d(55.1%, -55.1%, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes fx-el_btmright-inactive {
+    0% {
+        transform: translate3d(0%, 0%, 0);
+        opacity: 1;
+    }
+
+    16% {
+        transform: translate3d(27.5%, 27.5%, 0);
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate3d(-55.1%, -55.1%, 0);
+    }
+
+    100% {
+        transform: translate3d(-55.1%, -55.1%, 0);
+        opacity: 0;
+    }
+}
+#left-el-topleft.inactive {
+    animation: fx-el_topleft-inactive 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_topleft-inactive 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_topleft-inactive 1.6s 1 ease-in-out;
+}
+#el-topleft.inactive {
+    animation: fx-el_topleft-inactive 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_topleft-inactive 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_topleft-inactive 1.6s 1 ease-in-out;
+}
+#left-el-topright.inactive {
+    animation: fx-el_topright-inactive 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_topright-inactive 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_topright-inactive 1.6s 1 ease-in-out;
+}
+#el-topright.inactive {
+    animation: fx-el_topright-inactive 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_topright-inactive 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_topright-inactive 1.6s 1 ease-in-out;
+}
+#left-el-btmleft.inactive {
+    animation: fx-el_btmleft-inactive 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_btmleft-inactive 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_btmleft-inactive 1.6s 1 ease-in-out;
+}
+#el-btmleft.inactive {
+    animation: fx-el_btmleft-inactive 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_btmleft-inactive 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_btmleft-inactive 1.6s 1 ease-in-out;
+}
+
+#left-el-btmright.inactive {
+    animation: fx-el_btmright-inactive 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_btmright-inactive 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_btmright-inactive 1.6s 1 ease-in-out;
+}
+#el-btmright.inactive {
+    animation: fx-el_btmright-inactive 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_btmright-inactive 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_btmright-inactive 1.6s 1 ease-in-out;
+}
+
+/******************************
+.nav-el.active reverse
+******************************/
+@keyframes fx-el_topleft-active_reverse {
+    0% {
+        transform: translate3d(55.1%, 55.1%, 0) scale(20);
+        color: transparent;
+        background-color: #1a242f;
+    }
+
+    38% {
+        color: transparent;
+    }
+
+    50% {
+        transform: translate3d(55.1%, 55.1%, 0) scale(1);
+        color: #FFF;
+        background-color: #1a242f;
+    }
+
+    82% {
+        transform: translate3d(-27.5%, -27.5%, 0);
+        background-color: #2c3e50;
+    }
+
+    100% {
+        transform: translate3d(0%, 0%, 0);
+    }
+}
+
+@keyframes fx-el_topright-active_reverse {
+    0% {
+        transform: translate3d(-55.1%, 55.1%, 0) scale(20);
+        color: transparent;
+        background-color: #1a242f;
+    }
+
+    38% {
+        color: transparent;
+    }
+
+    50% {
+        transform: translate3d(-55.1%, 55.1%, 0) scale(1);
+        color: #FFF;
+        background-color: #1a242f;
+    }
+
+    82% {
+        transform: translate3d(27.5%, -27.5%, 0);
+        background-color: #2c3e50;
+    }
+
+    100% {
+        transform: translate3d(0%, 0%, 0);
+    }
+}
+
+@keyframes fx-el_btmleft-active_reverse {
+    0% {
+        transform: translate3d(55.1%, -55.1%, 0) scale(20);
+        color: transparent;
+        background-color: #1a242f;
+    }
+
+    38% {
+        color: transparent;
+    }
+
+    50% {
+        transform: translate3d(55.1%, -55.1%, 0) scale(1);
+        color: #FFF;
+        background-color: #1a242f;
+    }
+
+    82% {
+        transform: translate3d(-27.5%, 27.5%, 0);
+        background-color: #2c3e50;
+    }
+
+    100% {
+        transform: translate3d(0%, 0%, 0);
+    }
+}
+
+@keyframes fx-el_btmright-active_reverse {
+    0% {
+        transform: translate3d(-55.1%, -55.1%, 0) scale(20);
+        color: transparent;
+        background-color: #1a242f;
+    }
+
+    38% {
+        color: transparent;
+    }
+
+    50% {
+        transform: translate3d(-55.1%, -55.1%, 0) scale(1);
+        color: #FFF;
+        background-color: #1a242f;
+    }
+
+    82% {
+        transform: translate3d(27.5%, 27.5%, 0);
+        background-color: #2c3e50;
+    }
+
+    100% {
+        transform: translate3d(0%, 0%, 0);
+    }
+}
+#left-el-topleft.active_reverse {
+    animation: fx-el_topleft-active_reverse 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_topleft-active_reverse 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_topleft-active_reverse 1.6s 1 ease-in-out;
+}
+#el-topleft.active_reverse {
+    animation: fx-el_topleft-active_reverse 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_topleft-active_reverse 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_topleft-active_reverse 1.6s 1 ease-in-out;
+}
+
+#left-el-topright.active_reverse {
+    animation: fx-el_topright-active_reverse 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_topright-active_reverse 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_topright-active_reverse 1.6s 1 ease-in-out;
+}
+#el-topright.active_reverse {
+    animation: fx-el_topright-active_reverse 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_topright-active_reverse 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_topright-active_reverse 1.6s 1 ease-in-out;
+}
+#left-el-btmleft.active_reverse {
+    animation: fx-el_btmleft-active_reverse 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_btmleft-active_reverse 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_btmleft-active_reverse 1.6s 1 ease-in-out;
+}
+#el-btmleft.active_reverse {
+    animation: fx-el_btmleft-active_reverse 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_btmleft-active_reverse 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_btmleft-active_reverse 1.6s 1 ease-in-out;
+}
+#left-el-btmright.active_reverse {
+    animation: fx-el_btmright-active_reverse 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_btmright-active_reverse 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_btmright-active_reverse 1.6s 1 ease-in-out;
+}
+#el-btmright.active_reverse {
+    animation: fx-el_btmright-active_reverse 1.6s 1 ease-in-out;
+    -webkit-animation: fx-el_btmright-active_reverse 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_btmright-active_reverse 1.6s 1 ease-in-out;
+}
+
+/******************************
+.nav-el.inactive reverse
+******************************/
+@keyframes fx-el_topleft-inactive_reverse {
+    0% {
+        transform: translate(55.1%, 55.1%);
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(55.1%, 55.1%);
+    }
+
+    82% {
+        transform: translate(-27.5%, -27.5%);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fx-el_topright-inactive_reverse {
+    0% {
+        transform: translate(-55.1%, 55.1%);
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(-55.1%, 55.1%);
+    }
+
+    82% {
+        transform: translate(27.5%, -27.5%);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fx-el_btmleft-inactive_reverse {
+    0% {
+        transform: translate(55.1%, -55.1%);
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(55.1%, -55.1%);
+    }
+
+    82% {
+        transform: translate(-27.5%, 27.5%);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes fx-el_btmright-inactive_reverse {
+    0% {
+        transform: translate(-55.1%, -55.1%);
+        opacity: 0;
+    }
+
+    45% {
+        opacity: 0;
+    }
+
+    50% {
+        transform: translate(-55.1%, -55.1%);
+    }
+
+    82% {
+        transform: translate(27.5%, 27.5%);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+#left-el-topleft.inactive_reverse {
+    animation: fx-el_topleft-inactive_reverse 1.6s 1 ease-in-out forwards;
+    -webkit-animation: fx-el_topleft-inactive_reverse 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_topleft-inactive_reverse 1.6s 1 ease-in-out;
+}
+#el-topleft.inactive_reverse {
+    animation: fx-el_topleft-inactive_reverse 1.6s 1 ease-in-out forwards;
+    -webkit-animation: fx-el_topleft-inactive_reverse 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_topleft-inactive_reverse 1.6s 1 ease-in-out;
+}
+#left-el-topright.inactive_reverse {
+    animation: fx-el_topright-inactive_reverse 1.6s 1 ease-in-out forwards;
+    -webkit-animation: fx-el_topright-inactive_reverse 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_topright-inactive_reverse 1.6s 1 ease-in-out;
+}
+#el-topright.inactive_reverse {
+    animation: fx-el_topright-inactive_reverse 1.6s 1 ease-in-out forwards;
+    -webkit-animation: fx-el_topright-inactive_reverse 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_topright-inactive_reverse 1.6s 1 ease-in-out;
+}
+#left-el-btmleft.inactive_reverse {
+    animation: fx-el_btmleft-inactive_reverse 1.6s 1 ease-in-out forwards;
+    -webkit-animation: fx-el_btmleft-inactive_reverse 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_btmleft-inactive_reverse 1.6s 1 ease-in-out;
+}
+#el-btmleft.inactive_reverse {
+    animation: fx-el_btmleft-inactive_reverse 1.6s 1 ease-in-out forwards;
+    -webkit-animation: fx-el_btmleft-inactive_reverse 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_btmleft-inactive_reverse 1.6s 1 ease-in-out;
+}
+#left-el-btmright.inactive_reverse {
+    animation: fx-el_btmright-inactive_reverse 1.6s 1 ease-in-out forwards;
+    -webkit-animation: fx-el_btmright-inactive_reverse 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_btmright-inactive_reverse 1.6s 1 ease-in-out;
+}
+#el-btmright.inactive_reverse {
+    animation: fx-el_btmright-inactive_reverse 1.6s 1 ease-in-out forwards;
+    -webkit-animation: fx-el_btmright-inactive_reverse 1.6s 1 ease-in-out;
+    -moz-animation: fx-el_btmright-inactive_reverse 1.6s 1 ease-in-out;
+}
+
+/******************************
+.overlay anim
+******************************/
+@keyframes fx-overlay {
+    0% {
+        visibility: visible;
+        color: transparent;
+    }
+
+    50% {
+        background-color: #1a242f;
+        color: white;
+    }
+
+    100% {
+        visibility: visible;
+        background-color: #1a242f;
+        color: #FFF;
+    }
+}
+
+@keyframes fx-overlay-reverse {
+    0% {
+        visibility: visible;
+        background-color: #1a242f;
+        color: #FFF;
+    }
+
+    40% {
+        background-color: #1a242f;
+        color: transparent;
+    }
+
+    85% {
+        background-color: transparent;
+    }
+
+    100% {
+        visibility: hidden;
+        color: transparent;
+        background-color: transparent;
+    }
+}
+
+.home-overlay.active {
+    animation: fx-overlay .8s 1.25s 1 ease-in-out forwards;
+    -webkit-animation: fx-overlay .8s 1.25s 1 ease-in-out forwards;
+    -moz-animation: fx-overlay .8s 1.25s 1 ease-in-out forwards;
+}
+
+.home-overlay.active_reverse {
+    animation: fx-overlay-reverse .8s 1 ease-in backwards;
+    -webkit-animation: fx-overlay-reverse .8s 1 ease-in backwards;
+    -moz-animation: fx-overlay-reverse .8s 1 ease-in backwards;
+}
